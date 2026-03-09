@@ -30,5 +30,6 @@ class LSTMClassifier(nn.Module):
         output, (hidden, cell) = self.lstm(embedded)
         # (num_layers, B, hidden_dim) -> (B, hidden_dim)
         hidden = hidden[-1]
+        # (B, num_classes)
         out = self.fc(hidden)
         return out

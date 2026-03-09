@@ -7,8 +7,10 @@ This project implements RNN and LSTM models for sentiment classification on the 
 - `models.py` - contains RNN and LSTM model definitions  
 - `utils.py` - utility functions for tokenization 
 - `train.py` - script to train the models with arguments to choose RNN or LSTM
-- `inference.py` - script to run inference (predict sentiment) on new input text   
+- `inference.py` - script to run inference (predict sentiment) on new input 
+text   
 - `requirements.txt` - Python dependencies
+- `tests\` - unit and integration tests
 
 ## Usage
 
@@ -26,12 +28,23 @@ python train.py --model rnn
 ```
 python inference.py --model rnn --text "This movie was fantastic!"
 ```
+## Running Tests
+
+The project includes unit tests and integration tests implemented using pytest and pytest-mock.
+
+To run the test suite:
+
+```bash
+pytest
+```
 
 ## Requirements
 - Python 3.8+
 - PyTorch
 - transformers
 - datasets
+- pytest
+- pytest-mock
 
 ## Notes
 - Trained models and logs are saved in models/ and logs/ folders.

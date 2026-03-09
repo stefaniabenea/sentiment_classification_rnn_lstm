@@ -2,3 +2,5 @@ torch
 transformers
 datasets
 tqdm
+pytest
+pytest-mock
